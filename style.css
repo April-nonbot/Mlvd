@@ -1,0 +1,172 @@
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#b9ecff, #fce1ff);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#menu {
+    text-align: center;
+    padding: 30px 15px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin: 20px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.character,
+.world {
+    width: 170px;
+    height: 120px;
+    border: 3px solid white;
+    border-radius: 20px;
+    background: white;
+    font-size: 45px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.character:hover,
+.world:hover {
+    transform: scale(1.08);
+}
+
+.character span,
+.world span {
+    display: block;
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+.selected {
+    border: 5px solid #9b59b6;
+    transform: scale(1.05);
+}
+
+#startButton {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    background: #8e44ad;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#gameContainer {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#topBar {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#gameOver {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+#gameOver h1 {
+    font-size: 40px;
+}
+
+#gameOver h2 {
+    font-size: 45px;
+    margin: 10px;
+}
+
+#gameOver button {
+    margin: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    background: #8e44ad;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mobileControls {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+#mobileControls button {
+    padding: 18px 25px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .character,
+    .world {
+        width: 140px;
+        height: 105px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+}
+```
