@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Rush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <div id="menu" class="screen">
+    <h1>TRACK RUSH</h1>
+    <p>Build a circuit. Beat your best time.</p>
+
+    <button onclick="openBuilder()">BUILD TRACK</button>
+    <button onclick="startRace()">RACE TRACK</button>
+
+    <h3 id="bestMenu">Best Time: --</h3>
+  </div>
+
+  <div id="builder" class="screen hidden">
+    <h2>BUILD YOUR TRACK</h2>
+
+    <div class="builderButtons">
+      <button onclick="undoPoint()">UNDO</button>
+      <button onclick="clearTrack()">CLEAR</button>
+      <button onclick="finishBuilding()">RACE</button>
+    </div>
+
+    <canvas id="builderCanvas"></canvas>
+
+    <p>Tap to add corners. Drag the white points to change your circuit.</p>
+  </div>
+
+  <div id="race" class="screen hidden">
+
+    <div class="hud">
+      <div>TIME<br><b id="timer">00:00.00</b></div>
+      <div>LAP<br><b id="lap">1 / 3</b></div>
+      <div>BEST<br><b id="bestRace">--</b></div>
+    </div>
+
+    <canvas id="raceCanvas"></canvas>
+
+    <div class="controls">
+      <button id="left">◀</button>
+      <button id="brake">▼</button>
+      <button id="gas">▲</button>
+      <button id="right">▶</button>
+    </div>
+
+    <button class="menuButton" onclick="goMenu()">MENU</button>
+  </div>
+
+  <div id="finish" class="screen hidden">
+    <h1 id="finishTitle">FINISH!</h1>
+
+    <h2 id="finalTime">00:00.00</h2>
+    <p id="oldBest"></p>
+
+    <button onclick="startRace()">RACE AGAIN</button>
+    <button onclick="openBuilder()">EDIT TRACK</button>
+    <button onclick="goMenu()">MENU</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
