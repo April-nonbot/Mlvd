@@ -1,1 +1,205 @@
+* {
+  box-sizing: border-box;
+}
 
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+  touch-action: none;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#menu {
+  padding-top: 25vh;
+}
+
+h1 {
+  font-size: 45px;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
+}
+
+#menu p {
+  opacity: 0.7;
+  margin-bottom: 35px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 25px;
+  margin: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#menu button {
+  display: block;
+  width: 280px;
+  margin: 12px auto;
+}
+
+#menu button:first-of-type {
+  background: white;
+  color: black;
+}
+
+#menu button:nth-of-type(2) {
+  background: #333;
+  color: white;
+}
+
+#builderCanvas,
+#raceCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#builderCanvas,
+#raceCanvas {
+  background: #24552d;
+}
+
+#builder h2 {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  left: 20px;
+  margin: 0;
+}
+
+.builderButtons {
+  position: absolute;
+  z-index: 4;
+  top: 15px;
+  right: 15px;
+}
+
+.builderButtons button:last-child {
+  background: white;
+}
+
+#builder p {
+  position: absolute;
+  z-index: 3;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+}
+
+.hud {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+
+  padding: 10px 25px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hud div {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.hud b {
+  font-size: 18px;
+  color: white;
+}
+
+.controls {
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 8px;
+}
+
+.controls button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 25px;
+  background: white;
+}
+
+.menuButton {
+  position: absolute;
+  z-index: 5;
+  left: 15px;
+  bottom: 20px;
+  background: #222;
+  color: white;
+}
+
+#finish {
+  padding-top: 25vh;
+}
+
+#finish h1 {
+  font-size: 55px;
+}
+
+#finalTime {
+  font-size: 40px;
+}
+
+#finish button {
+  display: block;
+  width: 280px;
+  margin: 10px auto;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .hud {
+    gap: 18px;
+    padding: 8px 14px;
+  }
+
+  .controls button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .builderButtons button {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
